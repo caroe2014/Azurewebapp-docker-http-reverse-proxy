@@ -6,11 +6,8 @@ RUN yum -y install sudo net-tools
 EXPOSE 80
 
 # httpd configs
-#COPY base_vhost.conf /etc/httpd/conf.d/ 
-#COPY vhost80.conf /etc/httpd/conf.d/
+COPY base_vhost.conf /etc/httpd/conf.d/ 
 
-#COPY base_vhost.conf /usr/local/httpd/conf.d/ 
-#COPY vhost80.conf /usr/local/httpd/conf.d/
 COPY  httpd.conf /usr/local/httpd/conf/
 
 # start services
